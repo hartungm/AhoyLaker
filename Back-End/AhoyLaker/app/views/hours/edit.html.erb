@@ -1,0 +1,33 @@
+<section class="hour-edit-page">
+    <h1>Editing Hour</h1>
+    <%= form_for [@organization, @dining, @hour] do |f| %>
+
+        <% if @hour.errors.any? %>
+            <div id="error-explanation">
+                <h2>
+                    <%= pluralize(@hour.errors.count, "error") %> prohibited this hour from being saved:
+                </h2>
+                <ul>
+                    <% @hour.errors.full_messages.each do |message| %>
+                        <li><%= message %></li>
+                    <% end %>
+                </ul>
+            </div>
+        <% end %>
+
+        <div class="hour-form">
+            <p class="title-field">
+                <%= f.text_field :title, :placeholder => 'Hours Day' %>
+            </p>
+             <p class="data-field">
+                <%= f.text_field :data, :placeholder => 'Hours' %> 
+            </p>
+            <p class="hours-note">*Please ensure am/pm is added to opening and closing hours.</p>
+            </p>
+            <p class="submit-button">
+                <%= f.submit %>
+            </p>
+        </div>
+    <% end %>
+    <div class="back-button"><%= link_to 'Back', organization_dining_path(@dining.organization, @dining) %></div>
+</section>

@@ -1,0 +1,177 @@
+// // Place all the styles related to the Dinings controller here.
+// // They will automatically be included in application.css.
+// // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import 'brand';
+
+.edit-cafe-page {
+	h1 {
+		padding: 40px 0;
+		color: white;
+		font-size: 48px;
+		background-color: $light_blue;
+		margin-bottom: 40px;
+	}
+	.back-button {
+		position: absolute;
+		top: 10px;
+		left: 20px;
+		a {
+			text-decoration: none;
+			text-transform: uppercase;
+			color: white;
+			font-size: 16px;
+			font-weight: bold;
+			font-family: $font;
+		}
+	}
+	.edit_dining {
+		text-align: center;
+		input {
+			margin-bottom: 20px;
+		}
+		input[type="submit"] {
+			border: none;
+			background-color: $light-blue;
+			font-size: 24px;
+			border-radius: 20px;
+			color: white;
+		}
+	}
+}
+
+.dining-wrap {
+	.dining-links {
+		.edit, .back {
+			position: absolute;
+			top: 10px;
+			a {
+				text-decoration: none;
+				text-transform: uppercase;
+				color: white;
+				font-size: 16px;
+				font-weight: bold;
+				font-family: $font;
+			}
+		}
+		.edit {
+			left: 20px;
+		}
+		.back {
+			left: 80px;
+		}
+	}
+	h1 {
+		padding: 40px 0;
+		color: white;
+		font-size: 48px;
+		background-color: $light_blue;
+	}
+	h2 {
+		padding: 30px 0;
+		color: white;
+		font-size: 36px;
+		background-color: $light_blue_table_odd;
+		margin-bottom: 30px
+	}
+	.menu-links-header {
+		@include clearfix;
+		width: 85%;
+		margin: 0 auto;
+		background-color: $light_blue_table_even;
+		h3 {
+			padding: 20px 0;
+			@include clearfix;
+			width: 33.3%;
+			float: left;
+			color: white;
+			font-size: 24px;
+			text-transform: uppercase;
+		}
+	}
+	.hours {
+		width: 85%;
+		margin: 0 auto;
+		margin-bottom: 20px;
+		.hour {
+			padding: 10px 0;
+			@include clearfix;
+			width: 100%;
+			background-color: $light_blue_table_odd;
+			.hour-title, .hour-data, .hour-link-wrap {
+				width: 33.3%;
+				float: left;
+				h3 {
+					color: white;
+					font-size: 20px;
+				}
+				p {
+					color: white;
+					font-size: 20px;
+					font-weight: bold;
+				}
+				a {
+					padding: 10px 20px;
+					text-decoration: none;
+					color: white;
+					font-size: 20px;
+					&:hover {
+						background-color: $light_blue_table_even;
+					}
+				}
+			}
+		}
+	}
+	.menus {
+		width: 85%;
+		margin: 0 auto;
+		margin-bottom: 20px;
+		.menu {
+			padding: 10px 0;
+			@include clearfix;
+			width: 100%;
+			background-color: $light_blue_table_odd;
+			.menu-title, .menu-data, .menu-link-wrap {
+				width: 33.3%;
+				float: left;
+				h3 {
+					color: white;
+					font-size: 20px;
+				}
+				p {
+					color: white;
+					font-size: 20px;
+					font-weight: bold;
+				}
+				a {
+					padding: 10px 20px;
+					text-decoration: none;
+					color: white;
+					font-size: 20px;
+					&:hover {
+						background-color: $light_blue_table_even;
+					}
+				}
+			}
+		}
+	}
+	.add-menu-wrap {
+		text-align: center;
+	
+		textarea {
+			font-size: 24px;
+			padding: 10px 19px;
+			margin: 20px;
+		}
+		input[type="submit"] {
+			font-size: 24px;
+			margin: 20px 0;
+			padding: 10px 20px;
+			border: none;
+			background-color: $light-blue;
+			color: white;
+		}
+	}
+}
+
+

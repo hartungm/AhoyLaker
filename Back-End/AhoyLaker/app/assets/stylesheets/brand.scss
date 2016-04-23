@@ -1,0 +1,67 @@
+$blue: #3b90ce;
+$blue-table-odd: #5EA7DB;
+$blue-table-even: #1A7CC1;
+$light-blue: #75cbcb;
+$light-blue-table-odd: #A7E6E6;
+$light-blue-table-even: #4BA9A9;
+$orange: #ed6545;
+$orange-table-odd: #FF886C;
+$orange-table-even: #DA3F1A;
+$white: #ffffff;
+
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900);
+
+$font: 'Lato', sans-serif;
+
+@mixin clearfix {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+		height: 0;
+		line-height: 0;
+	}
+}
+
+body {
+	padding: 0;
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	font-family: $font;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+
+input {
+	font-size: 24px;
+	padding: 10px 20px;
+}
+
+.nav {
+	background-color: $blue;
+	text-align: right;
+	ul {
+		display: inline;
+		li {
+			font-family: $font;
+			font-size: 16px;
+			color: white;
+			display: inline-block;
+			list-style-type: none;
+			a {
+				display: block;
+				font-family: $font;
+				text-decoration: none;
+				padding: 10px 20px;
+				background-color: $blue;
+				color: white;
+				text-transform: uppercase;
+				font-weight: bold;
+			}
+		}
+	}
+}
+

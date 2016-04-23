@@ -1,0 +1,36 @@
+<div class="dining-wrap">
+	<h1><%= @dining.name %></h1>
+	<section class="dining-links">
+		<div class="dining-link-wrap">
+			<div class="dining-link edit"><%= link_to 'Edit', edit_organization_dining_path(@organization, @dining) %></div>
+		</div>
+		<div class="dining-link-wrap">
+			<div class="dining-link back"><%= link_to 'Back', organization_path(@organization) %></div>
+		</div>
+	</section>
+
+	<section class="hours-wrap">
+		<div class="hours-title"><h2>Hours</h2></div>
+		<div class="menu-links-header">
+            <h3 class="show">Day</h3>
+            <h3 class="edit">Hours</h3>
+            <h3 class="delete">Edit</h3>            
+        </div>
+		<div class="hours"><%= render @dining.hours %></div>
+	</section>
+
+	<section class="menus-wrap">
+		<div class="menus-title"><h2>Menus Sections</h2></div>
+		<div class="menu-links-header">
+            <h3 class="show">Menu</h3>
+            <h3 class="edit">Edit</h3>
+            <h3 class="delete">Delete</h3>            
+        </div>
+		<div class="menus"><%= render @dining.menus %></div>
+	</section>
+
+	<section class="add-menu-wrap">
+		<h2 class="add-title">Add a Menu Section</h2>
+		<%= render 'menus/form' %>
+	</section>
+</div>

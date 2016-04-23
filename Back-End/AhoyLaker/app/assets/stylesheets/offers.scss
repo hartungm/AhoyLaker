@@ -1,0 +1,44 @@
+// // Place all the styles related to the Offers controller here.
+// // They will automatically be included in application.css.
+// // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import 'brand';
+
+.offer-edit-page {
+	h1 {
+		font-size: 36px;
+		padding: 40px 0;
+		color: white;
+		background-color: $orange;
+		margin-bottom: 40px;
+	}
+	.back-button {
+		position: absolute;
+		top: 10px;
+		left: 20px;
+		a {
+			text-decoration: none;
+			font-family: $font;
+			text-transform: uppercase;
+			font-size: 16px;
+			color: white;
+			font-weight: bold;
+		}
+	}
+	input {
+		margin-bottom: 20px;
+	}
+	textarea {
+		padding: 10px 19px;
+		font-size: 24px;
+		margin-bottom: 20px;
+	}
+	input[type="submit"] {
+		border: none;
+		font-size: 24px;
+		font-weight: bold;
+		background-color: $orange;
+		color: white;
+		border-radius: 20px;
+	}
+}

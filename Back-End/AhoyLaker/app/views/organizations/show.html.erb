@@ -1,0 +1,58 @@
+<div class="org-show-page">
+	<% if @organization.enabled %>
+		<section class="organization-wrap">
+			<div class="organization">
+			    <div class="organization-info">
+			        <h2 class="organization-name"><%= @organization.name %></h2>
+			    </div>
+				<div class="organization-links">
+					<% if @current_user.is_admin %>
+						<div class="organization-link-wrap">
+							<div class="organization-link edit"><%= link_to 'Edit', edit_organization_path(@organization) %></div>
+						</div>
+						<div class="organization-link-wrap">
+							<div class="organization-link back"><%= link_to 'Back', organizations_path %></div>
+						</div>
+					<% end %>
+				</div>
+			</div>
+		</section>
+
+		<% if @organization.org_type == 1 || @organization.org_type == 3 || @organization.org_type == 4 %>
+			<section class="offers-wrap">
+				<div class="offers-title"><h2>Offers</h2></div>
+				<div class="offer-links-header">
+		            <h3 class="show">Offer</h3>
+		            <h3 class="edit">Edit</h3>
+		            <h3 class="delete">Delete</h3>            
+		        </div>
+				<div class="offers"><%= render @organization.offers %></div>
+			</section>
+
+			<section class="add-offer-wrap">
+				<h2 class="add-title">Add an Offer</h2>
+				<%= render 'offers/form' %>
+			</section>
+		<% end %>
+
+		<% if @organization.org_type == 1 || @organization.org_type == 2 || @organization.org_type == 4 %>
+			<section class="dinings-wrap">
+				<div class="dinings-title"><h2>Cafeterias</h2></div>
+				<div class="dining-links-header">
+		            <h3 class="show">Show</h3>
+		            <h3 class="edit">Edit</h3>
+		            <h3 class="delete">Delete</h3>            
+		        </div>
+				<div class="dinings"><%= render @organization.dinings %></div>
+			</section>
+
+
+			<section class="add-dinings-wrap">
+				<h2 class="add-title">Add a Cafeteria</h2>
+				<%= render 'dinings/form' %>
+			</section>
+		<% end %>
+	<% else %>
+		<p>Sorry, your organization is not enabled, please contact administrator.</p>
+	<% end %>
+</div> 

@@ -1,0 +1,44 @@
+<%= form_for @organization do |f| %>
+<% if @organization.errors.any? %>
+    <div id="error_explanation">
+        <h2>
+            <%= pluralize(@organization.errors.count, "error") %>
+            prohibited this organization from being saved:
+        </h2>
+        <ul>
+            <% @organization.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+        </ul>
+    </div>
+<% end %>
+
+    <div class="organization-form">
+        <p class="name-field">
+            <%= f.text_field :name, :placeholder => 'Organization Name' %>
+        </p>
+
+        <p class="type-field">
+            <%= f.number_field :org_type, :placeholder => 'Organization Type'%>
+            <div class="org-type-explanation">
+                <h3> Org Types:</h3>
+                <ul>
+                    <li>1 - Admin</li>
+                    <li>2 - Dining Halls</li>
+                    <li>3 - Offers</li>
+                    <li>4 - Dining Halls and Offers</li>
+                </ul>
+            </div>
+        </p>
+
+        <p class="enabled-field">
+            <%= f.label :enabled %>:
+            <%= f.check_box :enabled %>
+        </p>
+
+        <p class="submit-button">
+            <%= f.submit %>
+        </p>
+    </div>
+
+<% end %>

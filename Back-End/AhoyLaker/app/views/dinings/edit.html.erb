@@ -1,0 +1,13 @@
+<div class="edit-cafe-page">
+	<h1>Editing Cafeteria</h1>
+	<%= form_for([@organization, @dining]) do |f| %>
+	    <p class="name-field">
+	        <%= f.text_field :name, :placeholder => 'Cafe Name' %>
+	    </p>
+	    <p class="location-field">
+	        <%= f.text_field :location, :placeholder => 'Location' %>
+	    </p>
+	        <div class="add-dining-button link"><%= f.submit "Update" %></div>
+	<% end %>
+	<div class="back-button"><%= link_to 'Back', organization_path(@organization) %></div>
+</div>

@@ -1,0 +1,19 @@
+<div class="offer">
+	<div class="offer-links">
+		<div class="offer-link-wrap">
+			<p class="offer-link">
+				<%= link_to offer.name, organization_offer_path(offer.organization, offer) %>
+			</p>
+		</div>
+		<div class="offer-link-wrap">
+			<p class="offer-link">
+				<%= link_to 'Edit', edit_organization_offer_path(offer.organization, offer) %>
+			</p>
+		</div>
+		<div class="offer-link-wrap">
+			<p class="offer-link">
+				<%= link_to 'Delete Offer' , [offer.organization, offer], method: :delete, data: { confirm: 'Are You Sure?' } %>
+			</p>
+		</div>
+	</div>
+</div>

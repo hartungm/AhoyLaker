@@ -1,0 +1,420 @@
+// // Place all the styles related to the Organizations controller here.
+// // They will automatically be included in application.css.
+// // You can use Sass (SCSS) here: http://sass-lang.com/
+// @import "brand";
+
+// /********************** INDEX PAGE ************************/
+
+@import 'brand';
+
+.organization-index {
+	.new-organization-link {
+		p {
+			a {
+				position: absolute;
+				top: 10px;
+				left: 20px;
+				font-size: 16px;
+				text-decoration: none;
+				color: white;
+				font-weight: bold;
+				text-transform: uppercase;
+			}
+		}
+	}
+	h1 {
+		font-size: 48px;
+		color: white;
+		padding: 40px 0;
+		background-color: $blue;
+		margin-bottom: 40px;
+		&.page-title-user {
+			background-color: $light-blue;
+			margin-top: 40px;
+		}
+		&.page-title-offer {
+			background-color: $orange;
+		}
+	}
+	.orgs {
+		@include clearfix;
+		width: 85%;
+		margin: 0 auto;
+
+		h3 {
+			background-color: $blue;
+			font-size: 32px;
+			color: white;
+			padding: 20px 0;
+			margin-top: 20px;
+		}
+
+		.organization-links-header {
+			@include clearfix;
+			background-color: $blue-table-even;
+			h3 {
+				float: left;
+				width: 33.3%;
+				color: white;
+				text-transform: uppercase;
+				font-size: 24px;
+				margin-top: 0;
+			}
+		}
+
+		.org {
+			padding: 15px 0 15px;
+			@include clearfix;
+			background-color: $blue-table-odd;
+			&:last-child {
+				padding-bottom: 15px;
+			}
+			.organization-links {
+				@include clearfix;
+				.organization-link-wrap {
+					width: 33.3%;
+					float: left;
+					a {
+						padding: 10px 20px;
+						text-decoration: none;
+						color: white;
+						&:hover {
+							background-color: $blue-table-even;
+						}
+					}
+				}
+			}
+		}
+	}
+	.users {
+		@include clearfix;
+		width: 85%;
+		margin: 0 auto;
+		margin-bottom: 40px;
+
+		.user-links-header {
+			@include clearfix;
+			background-color: $light-blue-table-even;
+			padding: 20px 0;
+			h3 {
+				float: left;
+				width: 33.3%;
+				color: white;
+				text-transform: uppercase;
+				font-size: 24px;
+			}
+		}
+
+		.user {
+			padding: 15px 0 0;
+			@include clearfix;
+			background-color: $light-blue-table-odd;
+			&:last-child {
+				padding-bottom: 15px;
+			}
+			.user-links {
+				@include clearfix;
+				.user-link-wrap {
+					color: white;
+					width: 33.3%;
+					float: left;
+					a {
+						padding: 10px 20px;
+						text-decoration: none;
+						color: white;
+						&:hover {
+							background-color: $light-blue-table-even;
+						}
+					}
+				}
+			}
+		}
+	}
+	.offer-links-header {
+		@include clearfix;
+		width: 85%;
+		margin: 0 auto;
+		background-color: $orange-table-even;
+		padding: 20px 0;
+		h3 {
+			float: left;
+			width: 33.3%;
+			color: white;
+			text-transform: uppercase;
+			font-size: 24px;
+		}
+	}
+	.offers {
+		@include clearfix;
+		width: 85%;
+		margin: 0 auto;
+		margin-bottom: 40px;
+
+		.offer {
+			padding: 15px 0 0;
+			@include clearfix;
+			background-color: $orange-table-odd;
+			&:last-child {
+				padding-bottom: 15px;
+			}
+			.offer-links {
+				@include clearfix;
+				.offer-link-wrap {
+					color: white;
+					width: 33.3%;
+					float: left;
+					a {
+						padding: 10px 20px;
+						text-decoration: none;
+						color: white;
+						&:hover {
+							background-color: $orange-table-even;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.org-show-page {
+	.organization-links {
+		.edit {
+			position: absolute;
+			top: 10px;
+			left: 20px;
+			a {
+				text-decoration: none;
+				color: white;
+				font-size: 16px;
+				text-transform: uppercase;
+				font-weight: bold;
+				font-family: $font;
+			}
+		}
+		.back {
+			position: absolute;
+			top: 10px;
+			left: 80px;
+			a {
+				text-decoration: none;
+				color: white;
+				font-size: 16px;
+				text-transform: uppercase;
+				font-weight: bold;
+				font-family: $font;
+			}
+		}
+	}
+	.organization {
+		h2 {
+			font-size: 48px;
+			color: white;
+			background-color: $blue;
+			padding: 40px 0;
+		}
+	}
+	.offers-wrap {
+		h2 {
+			font-size: 36px;
+			color: white;
+			background-color: $orange;
+			padding: 20px;
+			margin-bottom: 20px;
+		}
+		.offer-links-header {
+			width: 85%;
+			margin: 0 auto;
+			@include clearfix;
+			background-color: $orange-table-even;
+			h3 {
+				float: left;
+				width: 33.3%;
+				color: white;
+				text-transform: uppercase;
+				font-size: 24px;
+			}
+		}
+		.offers {
+			@include clearfix;
+			width: 85%;
+			margin: 0 auto;
+
+			.offer {
+				padding: 15px 0 0;
+				@include clearfix;
+				background-color: $orange-table-odd;
+				&:last-child {
+					padding-bottom: 15px;
+				}
+				.offer-links {
+					@include clearfix;
+					.offer-link-wrap {
+						width: 33.3%;
+						float: left;
+						a {
+							padding: 10px 20px;
+							text-decoration: none;
+							color: white;
+							&:hover {
+								background-color: $orange-table-even;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.add-offer-wrap {
+		text-align: center;
+		h2 {
+			margin: 20px 0;
+			background-color: $orange;
+			padding: 20px 0;
+			color: white;
+			font-size: 36px;
+		}
+		input {
+			margin-bottom: 20px;
+		}
+		textarea {
+			padding: 10px 19px;
+			font-size: 24px;
+			margin-bottom: 20px;
+		}
+		input[type="submit"] {
+			border: none;
+			font-size: 24px;
+			background-color: $orange;
+			color: white;
+			border-radius: 20px; 
+		}
+	}
+	.dinings-wrap {
+		h2 {
+			font-size: 36px;
+			color: white;
+			background-color: $light-blue;
+			padding: 20px;
+			margin-bottom: 20px;
+		}
+		.dining-links-header {
+			width: 85%;
+			margin: 0 auto;
+			@include clearfix;
+			background-color: $light-blue-table-even;
+			h3 {
+				float: left;
+				width: 33.3%;
+				color: white;
+				text-transform: uppercase;
+				font-size: 24px;
+			}
+		}
+		.dinings {
+			@include clearfix;
+			width: 85%;
+			margin: 0 auto;
+
+			.dining {
+				padding: 15px 0 0;
+				@include clearfix;
+				background-color: $light-blue-table-odd;
+				&:last-child {
+					padding-bottom: 15px;
+				}
+				.dining-links {
+					@include clearfix;
+					.dining-link-wrap {
+						width: 33.3%;
+						float: left;
+						a {
+							padding: 10px 20px;
+							text-decoration: none;
+							color: white;
+							&:hover {
+								background-color: $light-blue-table-even;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.add-dinings-wrap {
+		text-align: center;
+		h2 {
+			margin: 20px 0;
+			background-color: $light-blue;
+			padding: 20px 0;
+			color: white;
+			font-size: 36px;
+		}
+		input {
+			margin-bottom: 20px;
+		}
+		textarea {
+			padding: 10px 19px;
+			font-size: 24px;
+			margin-bottom: 20px;
+		}
+		input[type="submit"] {
+			border: none;
+			font-size: 24px;
+			background-color: $light-blue;
+			color: white;
+			border-radius: 20px; 
+		}
+	}
+}
+
+.organization-edit-page {
+	h1 {
+		font-size: 48px;
+		padding: 40px 0;
+		background-color: $blue;
+		color: white;
+		margin-bottom: 40px;
+	}
+	input {
+		margin-bottom: 20px;
+	}
+	.org-type-explanation {
+		text-align: center;
+		list-style-position: inside;
+		h3 {
+			font-family: $font;
+			font-size: 36px;
+		}
+		ul {
+			padding-left: 0;
+			li {
+				font-family: $font;
+				font-size: 24px;
+			}
+		}
+	}
+	.enabled-field {
+		font-size: 24px;
+	}
+	input[type="submit"] {
+		border: none;
+		background-color: $blue;
+		color: white;
+		font-size: 24px;
+		border-radius: 20px;
+	}
+	.back-button {
+		position: absolute;
+		top: 10px;
+		left: 20px;
+		a {
+			text-decoration: none;
+			text-transform: uppercase;
+			font-size: 16px;
+			color: white;
+			font-family: $font;
+			font-weight: bold;
+		}
+	}
+}

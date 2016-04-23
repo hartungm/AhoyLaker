@@ -1,0 +1,33 @@
+<section class="menu-edit-page">
+    <h1>Editing Menu</h1>
+    <%= form_for [@organization, @dining, @menu] do |f| %>
+
+        <% if @menu.errors.any? %>
+            <div id="error-explanation">
+                <h2>
+                    <%= pluralize(@menu.errors.count, "error") %> prohibited this menu from being saved:
+                </h2>
+                <ul>
+                    <% @menu.errors.full_messages.each do |message| %>
+                        <li><%= message %></li>
+                    <% end %>
+                </ul>
+            </div>
+        <% end %>
+
+        <div class="menu-form">
+            <p class="title-field">
+                <%= f.text_field :section_title, :placeholder => 'Menu Title' %>
+            </p>
+             <p class="data-field">
+                <%= f.text_area :items, :rows => 20, :placeholder => 'Menu Items' %> 
+            </p>
+            <div class="menu-note"><p>*Please place a comma at the end of each menu item.</p></div>
+            </p>
+            <p class="submit-button">
+                <%= f.submit %>
+            </p>
+        </div>
+    <% end %>
+    <div class="back-button"><%= link_to 'Back', organization_dining_path(@dining.organization, @dining) %></div>
+</section>

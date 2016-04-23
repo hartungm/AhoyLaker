@@ -1,0 +1,186 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "brand";
+
+.login-wrap {
+	h1 {
+		font-size: 48px;
+		background-color: $blue;
+		color: white;
+		margin: 0 auto;
+		padding: 20px 0 40px;
+	}
+	form {
+		margin-top: 40px;
+		input { 
+			display: block;
+			margin: 0 auto 30px;
+		}
+		input[type="submit"] {
+			border: none;
+			background-color: $blue;
+			color: white;
+			border-radius: 20px;
+		}
+	}
+}
+
+.edit-page-user {
+	h1 {
+		font-size: 48px;
+		background-color: $blue;
+		color: white;
+		margin: 0 auto;
+		padding: 40px 0;
+		margin-bottom: 40px;
+	}
+	.back {
+		position: absolute;
+		top: 10px;
+		left: 20px;
+		a {
+			text-decoration: none;
+			text-transform: uppercase;
+			color: white;
+			font-size: 16px;
+			font-weight: bold;
+			font-family: $font;
+		}
+	}
+	p {
+		font-size: 24px;
+		font-family: $font;
+		padding-bottom: 10px;
+	}
+	input {
+		display: block;
+		margin: 0 auto 20px;
+	}
+	input[type="submit"] {
+		border: none;
+		background-color: $blue;
+		color: white;
+		border-radius: 20px;
+	}
+	.organizations {
+		margin-top: 40px;
+		h2 {
+			padding: 20px 0;
+			font-size: 36px;
+			color: white;
+			background-color: $blue;
+			margin-bottom: 40px;
+		}
+		.orgs-header {
+			width: 70%;
+			margin: 0 auto;
+			@include clearfix;
+			background-color: $blue-table-even;
+			h3 {
+				width: 50%;
+				float: left;
+				font-size: 24px;
+				padding: 20px 0;
+				color: white;
+			}
+		}
+		.orgs {
+			width: 70%;
+			margin: 0 auto;
+			margin-bottom: 40px;
+			.org {
+				background-color: $blue-table-odd;
+				padding: 20px 0;
+				@include clearfix;
+				h4 {
+					width: 50%;
+					float: left;
+					font-size: 24px;
+					padding: 10px 0;
+					color: white;
+				}
+			}
+		}
+	}
+}
+
+.signup-wrap {
+	h1 {
+		font-size: 48px;
+		background-color: $blue;
+		color: white;
+		margin: 0 auto;
+		padding: 40px 0;
+		margin-bottom: 40px;
+	}
+	.back {
+		position: absolute;
+		top: 10px;
+		left: 20px;
+		a {
+			text-decoration: none;
+			text-transform: uppercase;
+			color: white;
+			font-size: 16px;
+			font-weight: bold;
+			font-family: $font;
+		}
+	}
+	p {
+		font-size: 24px;
+		font-family: $font;
+		padding-bottom: 10px;
+	}
+	input {
+		display: block;
+		margin: 0 auto 20px;
+	}
+	input[type="submit"] {
+		border: none;
+		background-color: $blue;
+		color: white;
+		border-radius: 20px;
+	}
+	.organizations {
+		margin-top: 40px;
+		h2 {
+			padding: 20px 0;
+			font-size: 36px;
+			color: white;
+			background-color: $blue;
+			margin-bottom: 40px;
+		}
+		.orgs-header {
+			width: 70%;
+			margin: 0 auto;
+			@include clearfix;
+			background-color: $blue-table-even;
+			h3 {
+				width: 50%;
+				float: left;
+				font-size: 24px;
+				padding: 20px 0;
+				color: white;
+			}
+		}
+		.orgs {
+			width: 70%;
+			margin: 0 auto;
+			margin-bottom: 40px;
+			.org {
+				background-color: $blue-table-odd;
+				padding: 20px 0;
+				@include clearfix;
+				h4 {
+					width: 50%;
+					float: left;
+					font-size: 24px;
+					padding: 10px 0;
+					color: white;
+				}
+			}
+		}
+	}
+}

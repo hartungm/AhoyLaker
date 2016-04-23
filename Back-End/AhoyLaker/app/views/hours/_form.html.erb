@@ -1,0 +1,10 @@
+<%= form_for([@organization, @dining, @dining.hours.build]) do |f| %>
+    <p class="title-field">
+        <%= f.text_field :section_title, :placeholder => 'Hours Day' %>
+    </p>
+    <p class="items-field">
+        <%= f.label :items %>:
+        <%= f.text_field :items, :placeholder => 'Hours' %>
+    </p>
+        <div class="add-task-button link"><%= f.submit "Create" %></div>
+<% end %>

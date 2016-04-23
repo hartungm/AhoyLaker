@@ -1,0 +1,9 @@
+<%= form_for([@organization, @organization.dinings.build]) do |f| %>
+    <p class="name-field">
+        <%= f.text_field :name, :placeholder => 'Cafe Name' %>
+    </p>
+    <p class="location-field">
+        <%= f.text_field :location, :placeholder => 'Cafe Location' %>
+    </p>
+        <div class="add-dining-button link"><%= f.submit "Create" %></div>
+<% end %>

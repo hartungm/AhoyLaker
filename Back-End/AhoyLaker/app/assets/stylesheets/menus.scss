@@ -1,0 +1,46 @@
+// Place all the styles related to the menus controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import 'brand';
+
+.menu-edit-page {
+	h1 {
+		padding: 40px 0;
+		color: white;
+		background-color: $light-blue;
+		font-size: 48px;
+	}
+	.back-button {
+		position: absolute;
+		top: 10px;
+		left: 20px;
+		a {
+			text-decoration: none;
+			color: white;
+			font-size: 16px;
+			font-weight: bold;
+			text-transform: uppercase;
+			font-family: $font;
+		}
+	}
+	input {
+		margin-top: 20px;
+	}
+	textarea {
+		margin-top: 20px;
+		font-size: 24px;
+		padding: 10px 19px;
+	}
+	p {
+		margin-top: 20px;
+	}
+	input[type="submit"] {
+		border: none;
+		font-size: 24px;
+		color: white;
+		background-color: $light-blue;
+		border-radius: 20px;
+		margin-bottom: 40px;
+	}
+}

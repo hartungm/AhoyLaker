@@ -1,0 +1,18 @@
+<div class="menu">
+	<div class="menu-title">
+		<h3><%= menu.section_title %></h3>
+	</div>
+	<div class="menu-link-wrap">
+		<p class="menu-link">
+			<%= link_to 'Edit', edit_organization_dining_menu_path(menu.dining.organization_id ,menu.dining_id, menu.id) %>
+		</p>
+	</div>
+	<div class="menu-link-wrap">
+		<p class="menu-link">
+			<%= link_to 'Delete', organization_dining_menu_path(menu.dining.organization_id ,menu.dining_id, menu.id),
+                method: :delete,
+                data: { confirm: 'Are you sure?' }  %>
+		</p>
+	</div>
+
+</div>

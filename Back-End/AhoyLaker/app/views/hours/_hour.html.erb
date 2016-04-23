@@ -1,0 +1,11 @@
+<div class="hour">
+	<div class="hour-title">
+		<h3><%= hour.title %></h3>
+	</div>
+	<div class="hour-data">
+		<p><%= hour.data %></p>
+	</div>
+	<div class="hour-link-wrap"><p class="hour-link">
+		<%= link_to 'Edit', edit_organization_dining_hour_path(hour.dining.organization_id ,hour.dining_id, hour.id) %>
+	</p></div>
+</div>

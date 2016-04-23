@@ -1,0 +1,28 @@
+<section class="offer-wrap">
+	<h1 class="offer-name"><%= @offer.name %></h1>
+
+	<h3 class="offer-promo"><%= @offer.promo_details %></h3>
+
+	<p class="offer-description"><%= @offer.description %></p>
+
+	<div class="offer-links">
+		<div class="offer-link-wrap">
+			<p class="offer-link"><%= link_to 'Edit', edit_organization_offer_path(@offer.organization, @offer) %></p>
+		</div>
+
+		<div class="offer-link-wrap">
+			<p class="offer-link">
+			    <%= link_to 'Delete Offer' , [@offer.organization, @offer],
+			    method: :delete,
+			    data: { confirm: 'Are You Sure?' } %>
+			</p>
+		</div>
+
+		<div class="offer-link-wrap">
+			<p class="offer-link">
+			    <%= link_to 'Back', @organization %>
+			</p>
+		</div>
+	</div>
+
+</section>

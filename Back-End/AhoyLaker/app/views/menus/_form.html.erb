@@ -1,0 +1,13 @@
+<% @organization = Organization.find(params[:organization_id]) %>
+<%= form_for [@organization, @dining , @dining.menus.build] do |f| %>
+	<p class="title-field">
+        <%= f.text_field :section_title, :placeholder => 'Menu Section Name' %>
+    </p>
+    <p class="items-field">
+        <%= f.text_area :items, :rows => 20, :placeholder => 'Menu Section Items' %>
+    </p>
+
+    <div class="menu-note"><p>*Please place a comma at the end of each menu item.</p></div>
+
+    <div class="add-menu-button link"><%= f.submit "Create" %></div>
+<% end %>

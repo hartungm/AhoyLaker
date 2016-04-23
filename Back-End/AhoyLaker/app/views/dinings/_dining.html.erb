@@ -1,0 +1,13 @@
+<div class="dining">
+	<div class="dining-links">
+		<div class="dining-link-wrap"><p class="dining-link">
+			<%= link_to dining.name, organization_dining_path(dining.organization, dining) %>
+		</p></div>
+		<div class="dining-link-wrap"><p class="dining-link">
+			<%= link_to 'Edit', edit_organization_dining_path(dining.organization, dining) %>
+		</p></div>
+		<div class="dining-link-wrap"><p class="dining-link">
+			<%= link_to 'Delete Cafeteria' , [dining.organization, dining], method: :delete, data: { confirm: 'Are You Sure?' } %>
+		</p></div>
+	</div>
+</div>

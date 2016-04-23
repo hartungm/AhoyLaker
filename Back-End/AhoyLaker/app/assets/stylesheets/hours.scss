@@ -1,0 +1,35 @@
+@import 'brand';
+
+.hour-edit-page {
+	h1 {
+		background-color: $light-blue;
+		font-size: 48px;
+		padding: 40px 0;
+		color: white;
+		margin-bottom: 20px;
+	}
+	.back-button {
+		position: absolute;
+		top: 10px;
+		left: 20px;
+		a {
+			color: white;
+			font-size: 16px;
+			font-weight: bold;
+			font-family: $font;
+			text-transform: uppercase;
+			text-decoration: none;
+		}
+	}
+	input {
+		margin-bottom: 20px;
+	}
+	input[type="submit"] {
+		margin-top: 20px;
+		border: none;
+		background-color: $light-blue;
+		border-radius: 20px;
+		font-size: 24px;
+		color: white;
+	}
+}

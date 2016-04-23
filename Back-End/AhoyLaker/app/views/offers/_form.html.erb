@@ -1,0 +1,15 @@
+<%= form_for([@organization, @organization.offers.build]) do |f| %>
+    <p class="name-field">
+        <%= f.text_field :name, :placeholder => 'Offer Name' %>
+    </p>
+    <p class="coupon-code-field">
+        <%= f.text_field :coupon_code, :placeholder => 'Offer Code' %> 
+    </p>
+    <p class="promo-field">
+    	<%= f.text_field :promo_details, :placeholder => 'Promo Details' %> 
+    </p>
+    <p class="time-field">
+        <%= f.text_area :description, :rows => 5, :placeholder => 'Offer Description' %>
+    </p>
+        <div class="add-offer-button link"><%= f.submit "Create" %></div>
+<% end %>

@@ -1,0 +1,101 @@
+<div class="organization-index">
+    <section class="organization-intro">
+        <h1 class="page-title">Listing Organizations</h1>
+
+        <div class="new-organization-link">
+            <p><%= link_to 'New Organization', new_organization_path %></p>
+        </div>
+    </section>
+
+    <section class="orgs">
+        <h3>Cafe Organizations</h3>
+        <div class="organization-links-header">
+            <h3 class="show">Show</h3>
+            <h3 class="edit">Edit</h3>
+            <h3 class="delete">Delete</h3>            
+        </div>
+        <% @organizations.each do |organization| %>
+            <% if organization.org_type > 3 || organization.org_type < 3 %>
+                <div class="org">
+                    <div class="organization-links">
+                        <div class="organization-link-wrap">
+                            <p class="organization-link"><%= link_to organization.name, organization_path(organization) %></p>
+                        </div>
+                        <div class="organization-link-wrap">
+                            <p class="organization-link"><%= link_to 'Edit', edit_organization_path(organization) %></p>
+                        </div>
+                        <div class="organization-link-wrap">
+                            <p class="organization-link"><%= link_to 'Delete', organization_path(organization),
+                                method: :delete,
+                                data: { confirm: 'Are you sure?' } %>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            <% end %>
+        <% end %>
+        <h3>Offer Organizations</h3>
+        <div class="organization-links-header">
+            <h3 class="show">Show</h3>
+            <h3 class="edit">Edit</h3>
+            <h3 class="delete">Delete</h3>            
+        </div>
+        <% @organizations.each do |organization| %>
+            <% if organization.org_type > 2 %>
+                <div class="org">
+                    <div class="organization-links">
+                        <div class="organization-link-wrap">
+                            <p class="organization-link"><%= link_to organization.name, organization_path(organization) %></p>
+                        </div>
+                        <div class="organization-link-wrap">
+                            <p class="organization-link"><%= link_to 'Edit', edit_organization_path(organization) %></p>
+                        </div>
+                        <div class="organization-link-wrap">
+                            <p class="organization-link"><%= link_to 'Delete', organization_path(organization),
+                                method: :delete,
+                                data: { confirm: 'Are you sure?' } %>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            <% end %>
+        <% end %>
+    </section>
+
+    <h1 class="page-title-user">Listing Users</h1>
+
+    <section class="users">
+        <div class="user-links-header">
+            <h3 class="show">User</h3>
+            <h3 class="edit">Edit</h3>
+            <h3 class="delete">Delete</h3>            
+        </div>
+        <% @users.each do |user| %>
+            <div class="user">
+                <div class="user-links">
+                    <h3 class="user-link-wrap username"><%= user.email %></h3>
+                    <h3 class="user-link-wrap edit"><%= link_to 'Edit', edit_user_path(user) %></h3>
+                    <h3 class="user-link-wrap delete">
+                        <%= link_to 'Delete', user_path(user), method: :delete, data: { confirm: 'Are you sure?' } %>
+                    </h3>
+                </div>
+            </div>
+        <% end %>
+    </section>
+
+    <h1 class="page-title-offer">Listing Offers</h1>
+    <div class="offer-links-header">
+        <h3 class="show">Offer</h3>
+        <h3 class="edit">Edit</h3>
+        <h3 class="delete">Delete</h3>            
+    </div>
+        <section class="offers-wrap">
+            <div class="offers">
+                <% @organizations.each do |organization| %>
+                    <% if organization.org_type == 1 || organization.org_type == 3 || organization.org_type == 4 %>
+                        <%= render organization.offers %>
+                    <% end %>
+                <% end %>
+            </div>
+        </section>
+</div>

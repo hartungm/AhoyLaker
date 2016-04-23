@@ -1,0 +1,30 @@
+<div class="edit-page-user">
+	<h1>Editing Account</h1>
+
+	<div class="user-link back"><%= link_to 'Back', organizations_path %></div>
+
+	<%= form_for @user do |f| %>
+	    <%= f.text_field :first_name, :placeholder => "First name" %>
+	      <%= f.text_field :last_name, :placeholder => "Last name" %>
+	      <%= f.email_field :email, :placeholder => "Email" %>
+	      <%= f.password_field :password, :placeholder => "Password" %>
+	      <p>Admin: </p><%= f.check_box :is_admin? %>
+	      <%= f.submit "Update Account", class: "btn-submit" %>
+	<% end %>
+
+	<div class="organizations">
+		<h2>Organization List</h2>
+		<div class="orgs-header">
+			<h3>Organization ID</h3>
+			<h3>Organization Name</h3>
+		</div>
+		<div class="orgs">
+			 <% @organizations.each do |organization| %>
+			 	<div class="org">
+			 		<h4><%= organization.id %></h4>
+			 		<h4><%= organization.name %></h4>
+			 	</div>
+			 <% end %>
+		</div>
+	</div>
+</div>

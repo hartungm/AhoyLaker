@@ -1,0 +1,37 @@
+<section class="offer-edit-page">
+    <h1>Editing Offer</h1>
+    <%= form_for [@organization, @offer] do |f| %>
+
+        <% if @offer.errors.any? %>
+            <div id="error-explanation">
+                <h2>
+                    <%= pluralize(@offer.errors.count, "error") %> prohibited this offer from being saved:
+                </h2>
+                <ul>
+                    <% @offer.errors.full_messages.each do |message| %>
+                        <li><%= message %></li>
+                    <% end %>
+                </ul>
+            </div>
+        <% end %>
+
+        <div class="offer-form">
+            <p class="name-field">
+                <%= f.text_field :name, :placeholder => 'Offer Name' %>
+            </p>
+            <p class="coupon-code-field">
+                <%= f.text_field :coupon_code, :placeholder => 'Offer Code' %> 
+            </p>
+            <p class="promo-field">
+                <%= f.text_field :promo_details, :placeholder => 'Promo Details' %> 
+            </p>
+            <p class="time-field">
+                <%= f.text_area :description, :rows => 5, :placeholder => 'Offer Description' %>
+            </p>
+            <p class="submit-button">
+                <%= f.submit %>
+            </p>
+        </div>
+    <% end %>
+    <div class="back-button"><%= link_to 'Back', organization_path(@organization) %></div>
+</section>
